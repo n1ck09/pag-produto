@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Produto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: url();
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgb(15, 4, 4);
+            color: white;
+            padding: 10px 20px;
+        }
+        .content {
+            display: flex;
+            margin: 20px;
+            background: rgb(230, 227, 227);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .image-container {
+            margin-right: 20px;
+            text-align: center;
+        }
+        img {
+            width: 200px;
+            height: 150px;
+            border-radius: 10px;
+        }
+        .thumbnails {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .thumbnail {
+            cursor: pointer;
+            margin: 0 5px;
+            width: 60px; /* Tamanho das miniaturas */
+            height: 45px; /* Tamanho das miniaturas */
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .details {
+            flex-grow: 1;
+        }
+        .specifications, .reviews {
+            margin-top: 20px;
+        }
+        .add-to-cart {
+            margin-top: 20px;
+        }
+        button {
+            background-color: rgb(40, 3, 40);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: rgb(35, 7, 33);
+        }
+
+        a {
+            list-style-type: none;
+
+        }
+        header {
+            background: #010101;
+            color: #fff;
+            padding: 10px 20px;
+        }
+        
+        header nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        header nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        
+        footer {
+            background: #222;
+            color: #ccc;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <header>
+        <div class="logo">
+            <h1>N1PHONES</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">INICIO</a></li>
+                <li><a href="#sobre_">SOBRE</a></li>
+                <li><a href="#serviços">SERVIÇOS</a></li>
+                <li><a href="#contato(19 98456-4869)">CONTATO </a></li>
+            </ul>
+        </nav>
+    </header>
+</head>
+<body><head>
+    <link rel="shortcut icon" href="favicon-16x16.png" type="image/x-icon">
+</head>
+
+
+    <div class="header">
+        <div class="logo">
+            <div class="restaurant-name">CARREGADOR</div>
+        </div>
+        <div class="auth-links">
+            <a href="login.html" style="color: white;">Login</a>
+            <a href="cadastro.html" style="color: white;">Cadastro</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="image-container">
+            <img id="imagem-principal" src="carre.png" alt="Coca-cola">
+            <div class="thumbnails">
+        
+                
+            </div>
+        </div>
+        <div class="details">
+            <h2>carregador apple</h2>
+            <p>acompanha cabo</p>
+            <div class="add-to-cart">
+                <label for="quantity">Quantidade:</label>
+                <input type="number" id="quantity" value="1" min="1" style="width: 50px;">
+                <button><a href="index.html">Adicionar ao Carrinho</a></button>
+                <h1>R$120.00</h1>
+            </div>
+            <div class="specifications">
+                <h3>Especificações:</h3>
+                
+            </div>
+            <div class="reviews">
+                <h3>Avaliações:</h3>
+                <p>⭐⭐⭐⭐⭐ - "Carregador chegou em perfeito estado muito bom recomendo"</p>
+                <p>⭐⭐⭐⭐⭐ - "excelente carregador muito bom "</p>
+                <p>⭐⭐⭐ - "Melhor preço e custo beneficio!"</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Meu Site. Todos os direitos reservados.</p>
+            <ul>
+                <li><a href="#termos">Termos de Uso</a></li>
+                <li><a href="#privacidade">Política de Privacidade</a></li>
+                <li><a href="#contato">Fale Conosco</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+        const imagemPrincipal = document.getElementById('imagem-principal');
+        const miniaturas = document.querySelectorAll('.thumbnail');
+
+        miniaturas.forEach(miniatura => {
+            miniatura.addEventListener('click', function() {
+                const novaImagem = this.getAttribute('data-imagem');
+                imagemPrincipal.src = novaImagem;
+            });
+        });
+    </script>
+
+</body>
+</html>
